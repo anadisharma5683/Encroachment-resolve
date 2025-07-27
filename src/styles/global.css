@@ -1,0 +1,31 @@
+.page-container {
+  padding: 40px;
+  text-align: center;
+  color: white;
+  min-height: 100vh;
+}
+
+.citizen {
+  background-color: #004953; /* midnight green */
+}
+
+.admin {
+  background-color: #CD5C5C; /* indian red */
+}
+
+.employee {
+  background-color: #AF6E4D; /* brown sugar */
+}
+
+.page-box {
+  margin-top: 30px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid white;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  backdrop-filter: blur(3px);
+}

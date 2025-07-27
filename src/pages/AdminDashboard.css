@@ -1,0 +1,48 @@
+/* src/pages/AdminDashboard.css */
+
+.admin-container {
+  padding: 2rem;
+  background-color: var(--white-smoke);
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+.admin-title {
+  color: var(--walnut-brown);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.complaint-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.complaint-card {
+  background-color: var(--celadon);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(140, 96, 87, 0.2);
+}
+
+.forward-buttons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.forward-buttons button {
+  padding: 0.5rem 1rem;
+  background-color: var(--rose-taupe);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.forward-buttons button:hover {
+  background-color: var(--walnut-brown);
+}

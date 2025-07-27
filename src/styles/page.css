@@ -1,0 +1,40 @@
+.complaint-details {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  max-width: 600px;
+  background: #fdfdfd;
+  border: 1px solid #ccc;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.complaint-details select,
+.complaint-details textarea {
+  padding: 0.6rem;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  font-size: 1rem;
+}
+
+.complaint-details textarea {
+  resize: vertical;
+}
+
+.complaint-details button {
+  align-self: flex-start;
+  margin-top: 1rem;
+  padding: 0.6rem 1rem;
+  background-color: darkolivegreen;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.complaint-details button:hover {
+  background-color: #3e5622;
+}
