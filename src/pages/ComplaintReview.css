@@ -1,0 +1,73 @@
+/* src/pages/ComplaintReview.css */
+
+.review-container {
+  padding: 20px;
+}
+
+.review-container h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.complaint-info {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.info-block p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.image-block img {
+  width: 300px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.ai-result {
+  font-size: 0.95rem;
+  color: #444;
+  background: #f0f9ff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.action-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  padding: 10px 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.approve {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.approve:hover {
+  background-color: #27ae60;
+}
+
+.reject {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.reject:hover {
+  background-color: #c0392b;
+}

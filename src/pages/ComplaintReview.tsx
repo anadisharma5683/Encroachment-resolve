@@ -1,59 +1,39 @@
-import React, { useState } from "react";
-import "../styles/page.css";
-
-interface Complaint {
-  id: number;
-  name: string;
-  email: string;
-  type: string;
-  description: string;
-  status: string;
-}
-
-const dummyComplaint: Complaint = {
-  id: 1,
-  name: "Ravi Sharma",
-  email: "ravi@example.com",
-  type: "Land Encroachment",
-  description: "Someone built a wall on public road",
-  status: "Pending",
-};
+// src/pages/ComplaintReview.tsx
+import React from "react";
+import "./ComplaintReview.css";
 
 const ComplaintReview: React.FC = () => {
-  const [status, setStatus] = useState(dummyComplaint.status);
-  const [remarks, setRemarks] = useState("");
-
-  const handleSubmit = () => {
-    alert(`Complaint ID ${dummyComplaint.id} marked as "${status}" with remarks: "${remarks}"`);
-    // Future: Send this data to backend using fetch or axios
+  const complaint = {
+    id: 1,
+    citizenName: "Rajesh Kumar",
+    location: "Indore - Zone 4",
+    issue: "Illegal 4-storey building",
+    imageUrl: "https://via.placeholder.com/300x200",
+    detectedFloors: 4,
+    aiConfidence: 92,
   };
 
   return (
-    <div className="page-container">
-      <h2>Review Complaint</h2>
-      <div className="complaint-details">
-        <p><strong>ID:</strong> {dummyComplaint.id}</p>
-        <p><strong>Name:</strong> {dummyComplaint.name}</p>
-        <p><strong>Email:</strong> {dummyComplaint.email}</p>
-        <p><strong>Type:</strong> {dummyComplaint.type}</p>
-        <p><strong>Description:</strong> {dummyComplaint.description}</p>
-
-        <label>Status:</label>
-        <select value={status} onChange={(e) => setStatus(e.target.value)}>
-          <option value="Pending">Pending</option>
-          <option value="Reviewed">Reviewed</option>
-          <option value="Forwarded">Forwarded</option>
-        </select>
-
-        <label>Remarks (optional):</label>
-        <textarea
-          rows={4}
-          value={remarks}
-          onChange={(e) => setRemarks(e.target.value)}
-          placeholder="Add any comments here..."
-        />
-
-        <button onClick={handleSubmit}>Submit Review</button>
+    <div className="review-container">
+      <h2>Complaint Review</h2>
+      <div className="complaint-info">
+        <div className="info-block">
+          <p><strong>Complaint ID:</strong> {complaint.id}</p>
+          <p><strong>Citizen:</strong> {complaint.citizenName}</p>
+          <p><strong>Location:</strong> {complaint.location}</p>
+          <p><strong>Issue:</strong> {complaint.issue}</p>
+        </div>
+        <div className="image-block">
+          <img src={complaint.imageUrl} alt="Building evidence" />
+          <p className="ai-result">
+            AI Detected <strong>{complaint.detectedFloors}</strong> Floors<br />
+            Confidence: <strong>{complaint.aiConfidence}%</strong>
+          </p>
+        </div>
+      </div>
+      <div className="action-buttons">
+        <button className="btn approve">Mark as Valid</button>
+        <button className="btn reject">Mark as Invalid</button>
       </div>
     </div>
   );
